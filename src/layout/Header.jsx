@@ -2,6 +2,7 @@ import { useState } from "react"
 import { Link } from "react-router-dom"
 import styled from "styled-components"
 import { black, cyan, gray, NAV_LINKS } from "../constants"
+import logo from '../favicon.png'
 
 const Header = ({ userId }) => {
     const [openState,setOpenState] = useState(false)
@@ -15,11 +16,12 @@ const Header = ({ userId }) => {
             <div class={`menu-btn ${open}`}>
                 <span class={`menu-btn_burger ${open}`} onClick={menuToggle}></span>
             </div>
-            <div class="header_logo">
-
-            </div>
+            
             <nav class={`nav ${open}`}>
                 <ul class={`nav ${open}`}>
+                    <div class="header_logo" style={{position: "absolute",top:"10px"}}>
+                        <img src={logo} alt="" width="100px"/>
+                    </div>
                     {navLinks.map(x => {
                         return (
                             <li class={`nav_item ${open}`} onClick={menuToggle}>
@@ -51,6 +53,7 @@ const StyledHeader = styled.header`
     width: 100vw;
     padding: 1rem;
     transition: all 0.5s ease-in-out;
+    height: 10vh;
 
 
     .menu-btn{
@@ -220,7 +223,7 @@ const StyledHeader = styled.header`
             }
         }
     }
-
+    
     @media screen and (min-width: 768px) {
         .menu-btn{
             display: none;
@@ -239,7 +242,16 @@ const StyledHeader = styled.header`
             }
         }
     }
-    
+    @media screen and (min-width: 900px) {
+        .nav{
+            width: 30%;
+        }
+    }
+    @media screen and (min-width: 1300px) {
+        .nav{
+            width: 20%;
+        }
+    }
 `
 
 const StyledLink = styled(Link)`

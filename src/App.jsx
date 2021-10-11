@@ -6,6 +6,7 @@ import Home from "./components/Home";
 import Login from "./components/Login";
 import Profile from "./components/Profile";
 import Register from "./components/Register";
+import { black } from "./constants";
 import Content from "./layout/Content";
 import Header from "./layout/Header";
 
@@ -48,7 +49,7 @@ const Wrapper = styled.div`
     margin: 0;
     padding:0;
     min-height: 100vh;
-    background-color: gray;
+    background-color: ${black};
 `
 
 export default App;

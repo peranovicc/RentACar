@@ -10,10 +10,15 @@ const Content = (props) => {
 }
 
 const StyledContent =  styled.main`
-    background-color: ${black};
     min-height: 100vh;
     padding-top: 10vh;
-    @media screen and (min-width: 768px) {
+    
+    
+    @media screen and (min-width: 900px) {
+        margin-left: 30%;
+    }
+
+    @media screen and (min-width: 1300px) {
         margin-left: 20%;
     }
 `

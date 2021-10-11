@@ -14,6 +14,7 @@ const Login = ({ setUserId }) => {
 
     return (
         <Form>
+            <h2>Пријави се</h2>
             <input name="usernameemail" required type="text" placeholder="Корисничко име / Е-адреса" />
             <input required type="password" placeholder="Шифра" />
             <button type="submit" onClick={handleLogin}>Пријавите се</button>

@@ -18,7 +18,7 @@ const Profile = ({ userId, setUserId }) => {
 
     return user ? (
         <Form>
-            <h3>Мој профил:</h3>
+            <h2>Мој профил:</h2>
             <button style={{padding: '1px'}} onClick={() => {
                 setUserId(null)
                 localStorage.removeItem('userId')

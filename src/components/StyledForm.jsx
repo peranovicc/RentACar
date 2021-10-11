@@ -3,14 +3,16 @@ import { black, cyan } from "../constants"
 
 const Form = styled.form`
     display: flex;
+    position: relative;
     flex-direction: column;
     justify-content: space-around;
-    min-height: 100vh;
+    height: 90vh;
     width: 100%;
+    margin: auto;
     padding: 4% 5% 1% 5%;
     background-color: ${black};
     color: ${cyan};
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, ${cyan} 0px 18px 36px -18px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 60px 30px -12px, ${cyan} 0px 18px 30px -18px;
 
     a {
         color: ${cyan};
@@ -40,6 +42,7 @@ const Form = styled.form`
         border-bottom: 1px ${cyan} solid;
     }
 
+
     button {
         text-decoration: none;
         color: ${cyan};
@@ -61,6 +64,13 @@ const Form = styled.form`
         :hover{
             background-color: ${cyan};
             color: ${black};
+        }
+    }
+    @media screen and (min-width: 768px) {
+        height: 80vh;
+        width: 40%;
+        h2{
+            font-size: 2rem;
         }
     }
 `
